@@ -1,0 +1,6 @@
+.main {
+    max-width: 60rem;
+    display: flex;
+    gap: 3rem;
+    margin: 4rem auto;
+}

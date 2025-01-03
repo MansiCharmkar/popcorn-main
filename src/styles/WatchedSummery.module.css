@@ -1,0 +1,30 @@
+.summery {
+    background-color: #fa5252;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.summery > p {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.summery > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summery span {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.summery span > p {
+    display: inline-block;
+    padding-left: 0.5rem;
+    color: white;
+}

@@ -1,0 +1,20 @@
+App (movies, setMovies, query, setQuery, currentMovieDetail) (handleClick)
+    1. Nav 
+        1.1 Logo
+        1.2 Search 
+        1.3 TotalResults
+
+    2. Box 1 
+        2.1 MovieList 
+            2.1.1 Movie (id) ( onClick - handleClick(id) )
+            2.1.1 Movie (id) ( onClick - handleClick(id) )
+            2.1.1 Movie (id) ( onClick - handleClick(id) )
+            2.1.1 Movie (id) ( onClick - handleClick(id) )
+       
+
+    3. Box 2
+        3.1 WatchSummery
+        3.2 WatchedMoviesList
+            3.2.1 WatchedMovie
+        or
+        3.3 MovieDetails ( movieDetails )

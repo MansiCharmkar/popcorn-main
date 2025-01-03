@@ -1,0 +1,9 @@
+.box1 {
+    width: 50%;
+    max-height: calc(100vh - 15rem);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-y: scroll;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}

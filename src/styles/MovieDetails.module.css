@@ -1,0 +1,47 @@
+.movieDetails {
+    padding: 0.8rem;
+    border: 1px solid #fa525297;
+    border-radius: 0.4rem;
+    position: relative;
+    padding-top: 3rem;
+}
+
+.movieDetails .details {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.movieDetails .details img {
+    height: 12rem;
+    border-radius: 0.3rem;
+}
+
+.movieDetails .details>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movieDetails .details>div p {
+    padding-bottom: 2rem;
+}
+
+.movieDetails .description p {
+    margin-bottom: 1rem;
+}
+
+.closeMovie {
+    background-color: transparent;
+    border: none;
+    color: #fa5252;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.closeMovie:hover {
+    transform: scale(1.2);
+}
