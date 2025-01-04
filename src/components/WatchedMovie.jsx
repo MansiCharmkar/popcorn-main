@@ -20,7 +20,7 @@ function WatchedMovie({ image, name, imdbRating, userRating, length }) {
                     </span>
                     <span>
                         <Emoji txt="🕗" />
-                        <p>{length} min</p>
+                        <p>{length}</p>
                     </span>
                 </div>
             </div>

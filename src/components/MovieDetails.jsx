@@ -1,5 +1,6 @@
 import styles from "../styles/MovieDetails.module.css";
 import Emoji from "./Emoji";
+import StarRating from "./StarRating";
 
 // const movie = {
 //     title: "Spider-Man: No Way Home",
@@ -13,7 +14,11 @@ import Emoji from "./Emoji";
 //     genre: "Action, Adventure, Fantasy",
 // };
 
-function MovieDetails({ movieDetails, handleCloseMovieDetail }) {
+function MovieDetails({
+    movieDetails,
+    handleCloseMovieDetail,
+    handleAddMovieToWatchList,
+}) {
     const {
         Title: title,
         Poster: poster,
@@ -25,6 +30,10 @@ function MovieDetails({ movieDetails, handleCloseMovieDetail }) {
         Director: director,
         Genre: genre,
     } = movieDetails;
+
+    function handleAction(userRating) {
+        handleAddMovieToWatchList(movieDetails, userRating);
+    }
 
     return (
         <div className={styles.movieDetails}>
@@ -53,7 +62,12 @@ function MovieDetails({ movieDetails, handleCloseMovieDetail }) {
                     </p>
                 </div>
             </div>
-
+            <StarRating
+                color="#fa5252"
+                defaultRating={0}
+                size={10}
+                action={handleAction}
+            />
             <div className={styles.description}>
                 <p>
                     <strong>PLOT : </strong>

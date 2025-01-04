@@ -1,0 +1,22 @@
+.starBox {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.ratingBox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #fcefb1;
+    border-radius: 0.4rem;
+    width: fit-content;
+    margin: auto;
+}
+
+.ratingBox > span {
+    font-size: 1.3rem;
+    padding-bottom: 0.2rem;
+}

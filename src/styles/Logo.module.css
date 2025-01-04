@@ -1,14 +1,14 @@
 .logoBox {
-  display: flex;
-  gap: 0.1rem;
-  align-items: flex-end;
+    display: flex;
+    gap: 0.1rem;
+    align-items: flex-end;
 }
 
 .logoBox img {
-  height: 3rem;
+    height: 3rem;
 }
 
 .logoBox h1 {
-  font-size: 1.8rem;
-  color: #fa5252;
+    font-size: 1.8rem;
+    color: #fa5252;
 }

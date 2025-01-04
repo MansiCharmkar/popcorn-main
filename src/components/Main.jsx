@@ -8,6 +8,10 @@ function Main({
     movieDetails,
     activeMovieID,
     handleCloseMovieDetail,
+    isLoadingMovies,
+    isLoadingMovieDetails,
+    handleAddMovieToWatchList,
+    watchList,
 }) {
     return (
         <main className={styles.main}>
@@ -15,10 +19,14 @@ function Main({
                 movies={movies}
                 handleMovieCardClick={handleMovieCardClick}
                 activeMovieID={activeMovieID}
+                isLoadingMovies={isLoadingMovies}
             />
             <Box2
                 movieDetails={movieDetails}
                 handleCloseMovieDetail={handleCloseMovieDetail}
+                isLoadingMovieDetails={isLoadingMovieDetails}
+                handleAddMovieToWatchList={handleAddMovieToWatchList}
+                watchList={watchList}
             />
         </main>
     );

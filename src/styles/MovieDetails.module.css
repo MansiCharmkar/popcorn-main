@@ -17,18 +17,22 @@
     border-radius: 0.3rem;
 }
 
-.movieDetails .details>div {
+.movieDetails .details > div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.movieDetails .details>div p {
+.movieDetails .details > div p {
     padding-bottom: 2rem;
 }
 
 .movieDetails .description p {
     margin-bottom: 1rem;
+}
+
+.movieDetails .description {
+    padding-top: 2rem;
 }
 
 .closeMovie {
