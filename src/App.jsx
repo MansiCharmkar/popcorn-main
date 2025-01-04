@@ -84,9 +84,20 @@ function App() {
             imdbID: movieDeatils.imdbID,
         };
 
-        setWatchList(function (watchList) {
-            return [...watchList, watchedMovie];
+        const index = watchList.findIndex(function (movie) {
+            return movie.imdbID === movieDeatils.imdbID;
         });
+
+        if (index !== -1) {
+            watchList[index] = watchedMovie;
+            setWatchList(function (watchList) {
+                return [...watchList];
+            });
+        } else {
+            setWatchList(function (watchList) {
+                return [...watchList, watchedMovie];
+            });
+        }
     }
 
     return (
