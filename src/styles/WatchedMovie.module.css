@@ -4,6 +4,22 @@
     padding: 0.5rem;
     border: 1px solid #fa525297;
     border-radius: 0.4rem;
+    position: relative;
+}
+
+.movie button {
+    background-color: transparent;
+    border: none;
+    color: #fa5252;
+    font-size: 0.8rem;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.movie button:hover {
+    transform: scale(1.1);
 }
 
 .movie .imageBox img {

@@ -11,7 +11,11 @@ function App() {
     const [query, setQuery] = useState("pink");
     const [movies, setMovies] = useState([]);
 
-    const [watchList, setWatchList] = useState([]);
+    const [watchList, setWatchList] = useState(function () {
+        const data = JSON.parse(localStorage.getItem("watchList"));
+        if (data) return data;
+        else return [];
+    });
     const [movieDetails, setMovieDetails] = useState(null);
     const [isLoadingMovies, setIsLoadingMovies] = useState(false);
     const [isLoadingMovieDetails, setIsLoadingMovieDetails] = useState(false);
@@ -21,6 +25,7 @@ function App() {
     const activeMovieID = movieDetails?.imdbID;
 
     //3. Effect
+    // 3.1 fetching movies
     useEffect(
         function () {
             async function fetchMovies() {
@@ -40,6 +45,14 @@ function App() {
             }
         },
         [query]
+    );
+
+    // 3.2 save updated watchlist into localStorage after every Render'
+    useEffect(
+        function () {
+            localStorage.setItem("watchList", JSON.stringify(watchList));
+        },
+        [watchList]
     );
 
     //4. handller function
@@ -100,6 +113,16 @@ function App() {
         }
     }
 
+    function handleRemovemovieToWatchList(imdbID) {
+        setWatchList(function (watchList) {
+            watchList = watchList.filter(function (movie) {
+                return movie.imdbID !== imdbID;
+            });
+
+            return [...watchList];
+        });
+    }
+
     return (
         <div>
             <Nav
@@ -117,6 +140,7 @@ function App() {
                 isLoadingMovieDetails={isLoadingMovieDetails}
                 handleAddMovieToWatchList={handleAddMovieToWatchList}
                 watchList={watchList}
+                handleRemovemovieToWatchList={handleRemovemovieToWatchList}
             />
         </div>
     );

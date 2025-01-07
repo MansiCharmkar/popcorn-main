@@ -1,9 +1,21 @@
 import styles from "../styles/WatchedMovie.module.css";
 import Emoji from "./Emoji";
+import { formateMovieLength } from "../helper";
 
-function WatchedMovie({ image, name, imdbRating, userRating, length }) {
+function WatchedMovie({
+    image,
+    name,
+    imdbRating,
+    userRating,
+    length,
+    imdbID,
+    handleRemovemovieToWatchList,
+}) {
     return (
         <div className={styles.movie}>
+            <button onClick={() => handleRemovemovieToWatchList(imdbID)}>
+                <Emoji txt="❌" />
+            </button>
             <div className={styles.imageBox}>
                 <img src={image} alt={name} />
             </div>
@@ -20,7 +32,7 @@ function WatchedMovie({ image, name, imdbRating, userRating, length }) {
                     </span>
                     <span>
                         <Emoji txt="🕗" />
-                        <p>{length}</p>
+                        <p>{formateMovieLength(length)}</p>
                     </span>
                 </div>
             </div>

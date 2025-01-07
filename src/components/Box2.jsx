@@ -10,6 +10,7 @@ function Box2({
     isLoadingMovieDetails,
     handleAddMovieToWatchList,
     watchList,
+    handleRemovemovieToWatchList,
 }) {
     return (
         <div className={styles.box2}>
@@ -17,8 +18,13 @@ function Box2({
 
             {!isLoadingMovieDetails && !movieDetails && (
                 <>
-                    <WatchSummery />
-                    <WatchedMovieList watchList={watchList} />
+                    <WatchSummery watchList={watchList} />
+                    <WatchedMovieList
+                        watchList={watchList}
+                        handleRemovemovieToWatchList={
+                            handleRemovemovieToWatchList
+                        }
+                    />
                 </>
             )}
 

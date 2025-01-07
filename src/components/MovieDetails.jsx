@@ -1,6 +1,7 @@
 import styles from "../styles/MovieDetails.module.css";
 import Emoji from "./Emoji";
 import StarRating from "./StarRating";
+import { formateMovieLength } from "../helper";
 
 // const movie = {
 //     title: "Spider-Man: No Way Home",
@@ -55,7 +56,7 @@ function MovieDetails({
                 <div>
                     <h3>{title}</h3>
                     <p>
-                        {released} • {runtime} {genre}
+                        {released} • {formateMovieLength(runtime)} {genre}
                     </p>
                     <p>
                         <Emoji txt="🍅" /> {imdbRating} Tomatos
