@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
-import Main from "./components/Main";
+// import Main from "./components/Main";
 import Nav from "./components/Nav";
 import "./global.css";
+import Box1 from "./components/Box1";
+import Box2 from "./components/Box2";
+import styles from "./styles/Main.module.css";
 
 const KEY = "276bfff3";
-const API_URL = `http://www.omdbapi.com/?apikey=${KEY}`;
+const API_URL = `https://www.omdbapi.com/?apikey=${KEY}`;
 
 function App() {
     //1. state
@@ -130,7 +133,25 @@ function App() {
                 query={query}
                 resultCount={resultCount}
             />
-            <Main
+
+            <main className={styles.main}>
+                <Box1
+                    movies={movies}
+                    handleMovieCardClick={handleMovieCardClick}
+                    activeMovieID={activeMovieID}
+                    isLoadingMovies={isLoadingMovies}
+                />
+                <Box2
+                    movieDetails={movieDetails}
+                    handleCloseMovieDetail={handleCloseMovieDetail}
+                    isLoadingMovieDetails={isLoadingMovieDetails}
+                    handleAddMovieToWatchList={handleAddMovieToWatchList}
+                    watchList={watchList}
+                    handleRemovemovieToWatchList={handleRemovemovieToWatchList}
+                />
+            </main>
+
+            {/* <Main
                 movies={movies}
                 handleMovieCardClick={handleMovieCardClick}
                 movieDetails={movieDetails}
@@ -141,7 +162,7 @@ function App() {
                 handleAddMovieToWatchList={handleAddMovieToWatchList}
                 watchList={watchList}
                 handleRemovemovieToWatchList={handleRemovemovieToWatchList}
-            />
+            /> */}
         </div>
     );
 }
